@@ -7,13 +7,13 @@ import matplotlib.pyplot as plt
 from pycoingecko import CoinGeckoAPI
 
 # Define function to get stock data
-@st.cache_data
+@st.cache
 def get_stock_data(ticker):
     data = yf.download(ticker, period="1d", interval="1m")
     return data
 
 # Define function to get crypto data
-@st.cache_data
+@st.cache
 def get_crypto_data(id):
     cg = CoinGeckoAPI()
     data = cg.get_coin_market_chart_by_id(id, vs_currency="usd", days=1)
@@ -23,7 +23,7 @@ def get_crypto_data(id):
     return data
 
 # Define function to get news sentiment
-@st.cache_data
+@st.cache
 def get_news_sentiment(query):
     url = f"https://newsapi.org/v2/everything?q={query}&amp;from=2022-04-01&amp;to=2022-04-14&amp;sortBy=popularity&amp;apiKey=4ebba62c94fd429fa4649ba47fd8be2b"
     data = pd.read_json(url)
