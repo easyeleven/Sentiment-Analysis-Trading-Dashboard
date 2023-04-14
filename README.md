@@ -2,7 +2,8 @@
 This project is a sentiment analysis financial trading dashboard that allows users to select a stock or cryptocurrency and view its price data and news sentiment data. The dashboard uses Python, Streamlit, Pandas, yfinance, textblob, seaborn, matplotlib, and pycoingecko to gather and display the data. Users can select an asset type (stocks or crypto) and an asset from the sidebar, and view the price data and news sentiment data.
 
 ## Requirements
-* Python 3.6 or later* Streamlit
+* Python 3.6 or later
+* Streamlit
 * Pandas
 * yfinance
 * textblob
