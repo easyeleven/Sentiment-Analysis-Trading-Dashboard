@@ -25,7 +25,7 @@ def get_crypto_data(id):
 # Define function to get news sentiment
 @st.cache
 def get_news_sentiment(query):
-    url = f"https://newsapi.org/v2/everything?q={query}&amp;from=2022-04-01&amp;to=2022-04-14&amp;sortBy=popularity&amp;apiKey=YOUR_API_KEY"
+    url = f"https://newsapi.org/v2/everything?q={query}&amp;from=2022-04-01&amp;to=2022-04-14&amp;sortBy=popularity&amp;apiKey=4ebba62c94fd429fa4649ba47fd8be2b"
     data = pd.read_json(url)
     data["sentiment"] = data["description"].apply(lambda x: TextBlob(x).sentiment.polarity)
     return data
