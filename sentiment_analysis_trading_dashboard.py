@@ -9,8 +9,7 @@ from pycoingecko import CoinGeckoAPI
 # Define function to get stock data
 @st.cache
 def get_stock_data(ticker):
-    data = yf.download(ticker, period="1d", interval="1m")
-    return data
+    return yf.download(ticker, period="1d", interval="1m")
 
 # Define function to get crypto data
 @st.cache
